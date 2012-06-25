@@ -1,0 +1,35 @@
+This program was developped for the ROADEF/EURO 2012 Challenge.
+(More information on the challenge at http://challenge.roadef.org/2012/en/index.php).
+
+The sources corresponding to the final submission are included,
+together with some other interesting developments that we eventually
+rejected for the final program.
+
+This code was developped by :
+    - Michaël Gabay, PhD student, Laboratoire G-SCOP, Grenoble, France
+    - Sofia Zaourar, PhD student, Inria Grenoble, France
+Team J19 (Junior, Open-source)
+
+It is published under LGPL license.
+
+===============================================
+Dependencies :
+    - Boost (random)
+    - STL
+    - [Optional] Coin-Cbc (and Coin-Clp), available at http://www.coin-or.org/
+
+All programs can be compiled using make.
+make requires the variable CBC_PATH to be set to the Coin-CBC (build) direcory.
+
+If you don't want to use Cbc, you can edit the Makefiles in obj/ and bin/ to
+remove Cbc and not compile localIP and localIPReassignment.
+
+make builds machineReassignment and test_neighborhoodReassignment in bin/.
+
+machineReassignment is the executable file and works according to the challenge
+specifications, at http://challenge.roadef.org/2012/en/reponse.php.
+
+test_neighborhoodReassignment is a test program for the vector bin packng heuristic.
+
+make doc will generate the documentation in doc/. It requires Doxygen and Dot
+(part of Graphviz).
